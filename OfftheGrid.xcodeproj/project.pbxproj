@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1F0774238D2AA658E23958E9 /* Pods_OfftheGrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6271A05030827CDD5ECE1542 /* Pods_OfftheGrid.framework */; };
-		37342933515A2D2E069C9887 /* Pods_OfftheGridUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45632C8F7117505E31309E89 /* Pods_OfftheGridUITests.framework */; };
 		B0018193208734EA0068C996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0018192208734EA0068C996 /* AppDelegate.swift */; };
 		B0018195208734EA0068C996 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0018194208734EA0068C996 /* ViewController.swift */; };
 		B0018198208734EA0068C996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0018196208734EA0068C996 /* Main.storyboard */; };
@@ -18,9 +17,19 @@
 		B00181AB208734EC0068C996 /* OfftheGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00181AA208734EC0068C996 /* OfftheGridTests.swift */; };
 		B00181B6208734ED0068C996 /* OfftheGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00181B5208734ED0068C996 /* OfftheGridUITests.swift */; };
 		B00181C4208735330068C996 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B00181C3208735320068C996 /* GoogleService-Info.plist */; };
-		B00181C6208737680068C996 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00181C5208737680068C996 /* SplashViewController.swift */; };
 		B00181C820873A510068C996 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00181C720873A510068C996 /* SignupViewController.swift */; };
-		C485BE5F87D918D248CB3051 /* Pods_OfftheGridTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E057B173C93B538D8906497 /* Pods_OfftheGridTests.framework */; };
+		B00440722099A7E0006416FB /* NewPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00440712099A7E0006416FB /* NewPostController.swift */; };
+		B00440742099C84D006416FB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00440732099C84D006416FB /* SearchViewController.swift */; };
+		B0044076209A121A006416FB /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0044075209A121A006416FB /* PlaceData.swift */; };
+		B0044078209A2F9C006416FB /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = B0044077209A2F9C006416FB /* style.json */; };
+		B0842702208D88060089A65C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0842701208D88060089A65C /* LoginViewController.swift */; };
+		B086298B2099123B0047D6E2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B086298A2099123B0047D6E2 /* Post.swift */; };
+		B086298D20991D430047D6E2 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B086298C20991D430047D6E2 /* MapPin.swift */; };
+		B086298F209925570047D6E2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B086298E209925570047D6E2 /* MapViewController.swift */; };
+		B086299120995A5D0047D6E2 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B086299020995A5D0047D6E2 /* CurrentUser.swift */; };
+		B08629932099A54A0047D6E2 /* PostFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08629922099A54A0047D6E2 /* PostFeed.swift */; };
+		B0CC112AC959DF780030346D /* Pods_OfftheGridUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45632C8F7117505E31309E89 /* Pods_OfftheGridUITests.framework */; };
+		B846DDD98C0DEA2E003549A9 /* Pods_OfftheGridTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E057B173C93B538D8906497 /* Pods_OfftheGridTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +50,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2A87C04C532EA4E8357CDAFA /* Pods-OfftheGridTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfftheGridTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OfftheGridTests/Pods-OfftheGridTests.release.xcconfig"; sourceTree = "<group>"; };
 		2BE063EA8ABA8D9318AA3FF4 /* Pods-OfftheGrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfftheGrid.release.xcconfig"; path = "Pods/Target Support Files/Pods-OfftheGrid/Pods-OfftheGrid.release.xcconfig"; sourceTree = "<group>"; };
-		2F2DBF61F6CEC3ED86895E21 /* Pods-OfftheGridTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfftheGridTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OfftheGridTests/Pods-OfftheGridTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E0CC2B55A8F98C626C62C85 /* Pods-OfftheGridUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfftheGridUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OfftheGridUITests/Pods-OfftheGridUITests.release.xcconfig"; sourceTree = "<group>"; };
 		45632C8F7117505E31309E89 /* Pods_OfftheGridUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfftheGridUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E057B173C93B538D8906497 /* Pods_OfftheGridTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfftheGridTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		548A9CBC8CFDBB37854F78AC /* Pods-OfftheGrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfftheGrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OfftheGrid/Pods-OfftheGrid.debug.xcconfig"; sourceTree = "<group>"; };
+		5FB3F6CAD799D8EA4BE79C2A /* Pods-OfftheGridTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfftheGridTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OfftheGridTests/Pods-OfftheGridTests.release.xcconfig"; sourceTree = "<group>"; };
 		6271A05030827CDD5ECE1542 /* Pods_OfftheGrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfftheGrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63924CF327B0AD7BCC5333E3 /* Pods-OfftheGridUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfftheGridUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OfftheGridUITests/Pods-OfftheGridUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8CE9553DE21A04C8525A9CD5 /* Pods-OfftheGridTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfftheGridTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OfftheGridTests/Pods-OfftheGridTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B001818F208734EA0068C996 /* OfftheGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfftheGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0018192208734EA0068C996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0018194208734EA0068C996 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,10 +74,17 @@
 		B00181B5208734ED0068C996 /* OfftheGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfftheGridUITests.swift; sourceTree = "<group>"; };
 		B00181B7208734ED0068C996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B00181C3208735320068C996 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B00181C5208737680068C996 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B00181C720873A510068C996 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		D70254E37531844B8518FBC0 /* Pods-OfftheGridUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfftheGridUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OfftheGridUITests/Pods-OfftheGridUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DDACE5BBD297F62ACFDA4782 /* Pods-OfftheGridUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfftheGridUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OfftheGridUITests/Pods-OfftheGridUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B00440712099A7E0006416FB /* NewPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostController.swift; sourceTree = "<group>"; };
+		B00440732099C84D006416FB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B0044075209A121A006416FB /* PlaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceData.swift; sourceTree = "<group>"; };
+		B0044077209A2F9C006416FB /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
+		B0842701208D88060089A65C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B086298A2099123B0047D6E2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		B086298C20991D430047D6E2 /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
+		B086298E209925570047D6E2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B086299020995A5D0047D6E2 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		B08629922099A54A0047D6E2 /* PostFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C485BE5F87D918D248CB3051 /* Pods_OfftheGridTests.framework in Frameworks */,
+				B846DDD98C0DEA2E003549A9 /* Pods_OfftheGridTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37342933515A2D2E069C9887 /* Pods_OfftheGridUITests.framework in Frameworks */,
+				B0CC112AC959DF780030346D /* Pods_OfftheGridUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,10 +130,10 @@
 			children = (
 				548A9CBC8CFDBB37854F78AC /* Pods-OfftheGrid.debug.xcconfig */,
 				2BE063EA8ABA8D9318AA3FF4 /* Pods-OfftheGrid.release.xcconfig */,
-				2F2DBF61F6CEC3ED86895E21 /* Pods-OfftheGridTests.debug.xcconfig */,
-				2A87C04C532EA4E8357CDAFA /* Pods-OfftheGridTests.release.xcconfig */,
-				D70254E37531844B8518FBC0 /* Pods-OfftheGridUITests.debug.xcconfig */,
-				DDACE5BBD297F62ACFDA4782 /* Pods-OfftheGridUITests.release.xcconfig */,
+				8CE9553DE21A04C8525A9CD5 /* Pods-OfftheGridTests.debug.xcconfig */,
+				5FB3F6CAD799D8EA4BE79C2A /* Pods-OfftheGridTests.release.xcconfig */,
+				63924CF327B0AD7BCC5333E3 /* Pods-OfftheGridUITests.debug.xcconfig */,
+				3E0CC2B55A8F98C626C62C85 /* Pods-OfftheGridUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -147,14 +165,23 @@
 			children = (
 				B00181C3208735320068C996 /* GoogleService-Info.plist */,
 				B0018192208734EA0068C996 /* AppDelegate.swift */,
+				B086299020995A5D0047D6E2 /* CurrentUser.swift */,
+				B086298A2099123B0047D6E2 /* Post.swift */,
+				B086298C20991D430047D6E2 /* MapPin.swift */,
 				B0018194208734EA0068C996 /* ViewController.swift */,
-				B00181C5208737680068C996 /* SplashViewController.swift */,
+				B0842701208D88060089A65C /* LoginViewController.swift */,
+				B00440712099A7E0006416FB /* NewPostController.swift */,
+				B08629922099A54A0047D6E2 /* PostFeed.swift */,
+				B0044075209A121A006416FB /* PlaceData.swift */,
+				B086298E209925570047D6E2 /* MapViewController.swift */,
+				B00440732099C84D006416FB /* SearchViewController.swift */,
 				B00181C720873A510068C996 /* SignupViewController.swift */,
 				B0018196208734EA0068C996 /* Main.storyboard */,
 				B001819C208734EC0068C996 /* Assets.xcassets */,
 				B001819E208734EC0068C996 /* LaunchScreen.storyboard */,
 				B00181A1208734EC0068C996 /* Info.plist */,
 				B0018199208734EA0068C996 /* OfftheGrid.xcdatamodeld */,
+				B0044077209A2F9C006416FB /* style.json */,
 			);
 			path = OfftheGrid;
 			sourceTree = "<group>";
@@ -189,6 +216,7 @@
 				B001818C208734EA0068C996 /* Frameworks */,
 				B001818D208734EA0068C996 /* Resources */,
 				9BA4E3CDFAB29655311CE32E /* [CP] Embed Pods Frameworks */,
+				A3E1D12B4C814802EF57BF79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,7 +231,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B00181BD208734ED0068C996 /* Build configuration list for PBXNativeTarget "OfftheGridTests" */;
 			buildPhases = (
-				B9E711D4C32D18D8BDDB3FF9 /* [CP] Check Pods Manifest.lock */,
+				A79DD1C60D9E602BD2ECD478 /* [CP] Check Pods Manifest.lock */,
 				B00181A2208734EC0068C996 /* Sources */,
 				B00181A3208734EC0068C996 /* Frameworks */,
 				B00181A4208734EC0068C996 /* Resources */,
@@ -222,7 +250,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B00181C0208734ED0068C996 /* Build configuration list for PBXNativeTarget "OfftheGridUITests" */;
 			buildPhases = (
-				93117142460A57D1E9196806 /* [CP] Check Pods Manifest.lock */,
+				36A707C60733055DAA8FA41D /* [CP] Check Pods Manifest.lock */,
 				B00181AD208734ED0068C996 /* Sources */,
 				B00181AE208734ED0068C996 /* Frameworks */,
 				B00181AF208734ED0068C996 /* Resources */,
@@ -288,6 +316,7 @@
 				B00181A0208734EC0068C996 /* LaunchScreen.storyboard in Resources */,
 				B00181C4208735330068C996 /* GoogleService-Info.plist in Resources */,
 				B001819D208734EC0068C996 /* Assets.xcassets in Resources */,
+				B0044078209A2F9C006416FB /* style.json in Resources */,
 				B0018198208734EA0068C996 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,7 +338,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		93117142460A57D1E9196806 /* [CP] Check Pods Manifest.lock */ = {
+		36A707C60733055DAA8FA41D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -355,7 +384,27 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfftheGrid/Pods-OfftheGrid-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B9E711D4C32D18D8BDDB3FF9 /* [CP] Check Pods Manifest.lock */ = {
+		A3E1D12B4C814802EF57BF79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OfftheGrid/Pods-OfftheGrid-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfftheGrid/Pods-OfftheGrid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A79DD1C60D9E602BD2ECD478 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,11 +447,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0842702208D88060089A65C /* LoginViewController.swift in Sources */,
 				B0018195208734EA0068C996 /* ViewController.swift in Sources */,
+				B086298D20991D430047D6E2 /* MapPin.swift in Sources */,
+				B0044076209A121A006416FB /* PlaceData.swift in Sources */,
+				B08629932099A54A0047D6E2 /* PostFeed.swift in Sources */,
 				B0018193208734EA0068C996 /* AppDelegate.swift in Sources */,
+				B086298B2099123B0047D6E2 /* Post.swift in Sources */,
+				B00440742099C84D006416FB /* SearchViewController.swift in Sources */,
 				B00181C820873A510068C996 /* SignupViewController.swift in Sources */,
 				B001819B208734EA0068C996 /* OfftheGrid.xcdatamodeld in Sources */,
-				B00181C6208737680068C996 /* SplashViewController.swift in Sources */,
+				B086299120995A5D0047D6E2 /* CurrentUser.swift in Sources */,
+				B086298F209925570047D6E2 /* MapViewController.swift in Sources */,
+				B00440722099A7E0006416FB /* NewPostController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +636,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8F4HAPMXNR;
 				INFOPLIST_FILE = OfftheGrid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -598,6 +656,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8F4HAPMXNR;
 				INFOPLIST_FILE = OfftheGrid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -611,7 +670,7 @@
 		};
 		B00181BE208734ED0068C996 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F2DBF61F6CEC3ED86895E21 /* Pods-OfftheGridTests.debug.xcconfig */;
+			baseConfigurationReference = 8CE9553DE21A04C8525A9CD5 /* Pods-OfftheGridTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -633,7 +692,7 @@
 		};
 		B00181BF208734ED0068C996 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A87C04C532EA4E8357CDAFA /* Pods-OfftheGridTests.release.xcconfig */;
+			baseConfigurationReference = 5FB3F6CAD799D8EA4BE79C2A /* Pods-OfftheGridTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -655,7 +714,7 @@
 		};
 		B00181C1208734ED0068C996 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D70254E37531844B8518FBC0 /* Pods-OfftheGridUITests.debug.xcconfig */;
+			baseConfigurationReference = 63924CF327B0AD7BCC5333E3 /* Pods-OfftheGridUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -676,7 +735,7 @@
 		};
 		B00181C2208734ED0068C996 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DDACE5BBD297F62ACFDA4782 /* Pods-OfftheGridUITests.release.xcconfig */;
+			baseConfigurationReference = 3E0CC2B55A8F98C626C62C85 /* Pods-OfftheGridUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
