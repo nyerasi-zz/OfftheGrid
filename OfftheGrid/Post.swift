@@ -16,6 +16,7 @@ class Post {
     let poster: String
     let count: Int
     let date: Date
+    
     //store post location as a GMSMarker
     let location: GMSMarker
 
@@ -33,17 +34,26 @@ class Post {
         self.postId = id
         self.count = num
         self.location = loc
-        
+    }
+    
+    //check if post is expired
+    func isActive() -> Bool {
+        if (date.timeIntervalSinceNow) < 0 {
+            return false
+        }
+        return true
     }
     
     func getTimeRemaining() -> String {
         let secondsSincePosted = date.timeIntervalSinceNow
         let minutes = Int(secondsSincePosted / 60)
         let seconds = Int(secondsSincePosted) % 60
-        if minutes == 1 {
+        if minutes == 0 {
+            return "Only \(seconds) remaining"
+        } else if minutes == 1 {
             return "\(minutes) minute remaining"
         } else if minutes < 60 {
-            return "\(minutes) minutes remaining "
+            return "\(minutes) minutes remaining"
         } else if minutes < 120 {
             return "1 hour remaining"
         } else if minutes < 24 * 60 {

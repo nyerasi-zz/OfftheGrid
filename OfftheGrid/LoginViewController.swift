@@ -60,17 +60,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    //used to prevent user from having to log in at start
-    //comment out for debugging
-   // /*
+    //used to prevent user from having to log in at start, comment out for debugging
     override func viewDidAppear(_ animated: Bool) {
         Auth.auth().addStateDidChangeListener() { (auth, user) in
             if user != nil {
-                //self.performSegue(withIdentifier: "LoginToMain", sender: self)
+                self.performSegue(withIdentifier: "LoginToMain", sender: self)
             }
         }
     }
-   // */
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == self.username {
             if textField.text != nil {
@@ -81,6 +79,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 self.passWord = textField.text!
             }
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     /*
     // MARK: - Navigation

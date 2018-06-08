@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostWindow" customModule="OfftheGrid" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PostWindow" customModule="OfftheGrid" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTB-ZL-Chk">
+                    <rect key="frame" x="4" y="32" width="294" height="85"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="85" id="vFy-cP-asK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6A-i1-C8s">
+                    <rect key="frame" x="4" y="3" width="54" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6a-Hx-IRE">
+                    <rect key="frame" x="232" y="3" width="66" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3i-Wr-WNZ">
+                    <rect key="frame" x="101" y="120" width="53" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fi2-5r-j5m">
+                    <rect key="frame" x="155" y="120" width="6" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STe-UG-xw6">
+                    <rect key="frame" x="169" y="120" width="38" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="38" id="wq3-ab-Kbx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.87837446950313991" green="0.91109698701562913" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="Fi2-5r-j5m" firstAttribute="firstBaseline" secondItem="STe-UG-xw6" secondAttribute="firstBaseline" id="5ku-vy-2Sx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="STe-UG-xw6" secondAttribute="trailing" constant="93" id="5vm-2x-wx1"/>
+                <constraint firstItem="j6A-i1-C8s" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="3" id="89o-D7-ZNO"/>
+                <constraint firstItem="Fi2-5r-j5m" firstAttribute="baseline" secondItem="STe-UG-xw6" secondAttribute="baseline" id="CKg-lV-yNg"/>
+                <constraint firstItem="YTB-ZL-Chk" firstAttribute="top" secondItem="j6A-i1-C8s" secondAttribute="bottom" constant="8" symbolic="YES" id="Jky-fY-agf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="E3i-Wr-WNZ" secondAttribute="bottom" constant="9" id="LXR-qu-TYS"/>
+                <constraint firstItem="STe-UG-xw6" firstAttribute="leading" secondItem="E3i-Wr-WNZ" secondAttribute="trailing" constant="15" id="N0d-fc-jaq"/>
+                <constraint firstItem="YTB-ZL-Chk" firstAttribute="trailing" secondItem="C6a-Hx-IRE" secondAttribute="trailing" id="Qlc-8S-yn6"/>
+                <constraint firstItem="E3i-Wr-WNZ" firstAttribute="centerY" secondItem="Fi2-5r-j5m" secondAttribute="centerY" id="STo-Cs-ESe"/>
+                <constraint firstItem="Fi2-5r-j5m" firstAttribute="leading" secondItem="E3i-Wr-WNZ" secondAttribute="trailing" constant="1" id="UKq-VB-B1J"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="C6a-Hx-IRE" secondAttribute="trailing" constant="2" id="byr-SW-07t"/>
+                <constraint firstItem="j6A-i1-C8s" firstAttribute="baseline" secondItem="C6a-Hx-IRE" secondAttribute="baseline" id="iqP-da-8rz"/>
+                <constraint firstItem="E3i-Wr-WNZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="101" id="lMD-ft-4ct"/>
+                <constraint firstItem="j6A-i1-C8s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="4" id="rgD-Bo-WOD"/>
+                <constraint firstItem="YTB-ZL-Chk" firstAttribute="leading" secondItem="j6A-i1-C8s" secondAttribute="leading" id="zca-vq-VAV"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="count" destination="E3i-Wr-WNZ" id="nss-KS-HCx"/>
+                <outlet property="desc" destination="YTB-ZL-Chk" id="ACk-gX-gLT"/>
+                <outlet property="loc" destination="C6a-Hx-IRE" id="paj-Zh-33Y"/>
+                <outlet property="poster" destination="j6A-i1-C8s" id="VnP-Ep-AzC"/>
+                <outlet property="total" destination="STe-UG-xw6" id="dIq-au-gSI"/>
+            </connections>
+            <point key="canvasLocation" x="-47" y="328"/>
+        </view>
+    </objects>
+</document>

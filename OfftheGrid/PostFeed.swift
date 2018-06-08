@@ -45,6 +45,7 @@ func store(data: Data?, toPath path: String) {
 }
 
 func getPosts(user: CurrentUser, completion: @escaping ([Post]?) -> Void) {
+    //to retrieve all posts
     let dbRef = Database.database().reference()
     var postArray: [Post] = []
     dbRef.child("Posts").observeSingleEvent(of: .value, with: { snapshot -> Void in
@@ -65,6 +66,7 @@ func getPosts(user: CurrentUser, completion: @escaping ([Post]?) -> Void) {
         }
     })
 }
+
 
 func getDataFromPath(path: String, completion: @escaping (Data?) -> Void) {
     let storageRef = Storage.storage().reference()

@@ -10,55 +10,100 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, GMSMapViewDelegate {
+    //credit to Freepik from flaticon.com
+    let excl = UIImage(named: "Exclamation")
+    let excl2 = UIImage(named: "ReadPost")
     var manager = CLLocationManager()
     var currentLocation: CLLocation?
     var mapView: GMSMapView!
     var placesClient: GMSPlacesClient!
     var zoomLevel: Float = 10
     let currentUser = CurrentUser()
-    //goal is to read in all posts from a user's area and display the markers on the map—appearance changes for posts already seen by the user
+    var markers = [GMSMarker]()
+    
+    //goal is to read in all posts from a user's area and display the markers on the map; appearance changes for posts already seen by the user (marker color/image)
+    
     var posts = [Post]()
+    var activePosts = [Post]()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     // You don't need to modify the default init(nibName:bundle:) method.
     
-//    override func loadView() {
-//
-//        // Create a GMSCameraPosition that tells the map to display the
-//        // coordinate -33.86,151.20 at zoom level 6.
-//        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-//        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-//        view = mapView
-//
-//        // Creates a marker in the center of the map.
-//        let marker = GMSMarker()
-//        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-//        marker.title = "Sydney"
-//        marker.snippet = "Australia"
-//        marker.map = mapView
-//    }
+    //create instance of custom info window class
+    private var infoWindow = PostWindow()
+    fileprivate var locationMarker : GMSMarker? = GMSMarker()
+    
     func updateData() {
         getPosts(user: currentUser) { (posts) in
             if let posts = posts {
                 for post in posts {
-                    post.location.title = "-> " + post.poster + " @ " + post.place
-                    post.location.icon = GMSMarker.markerImage(with: UIColor.blue)
-                    post.location.opacity = 0.7
+                    //check if post is expired
+                    if (post.isActive()) {
+                    post.location.title = "Join " + post.poster + " @ " + post.place + "!"
+                    post.location.icon = self.imageWithImage(image: self.excl!, scaledToSize: CGSize(width: 25, height: 25))
+                    //post.location.icon = GMSMarker.markerImage(with: UIColor.blue)
+                    post.location.snippet = "\(post.count) needed with \(post.getTimeRemaining())!"
+                    post.location.opacity = 0.8
                     post.location.map = self.mapView
+                   //display modal popup with post description and accept button in long press of info window
+                        self.activePosts.append(post)
+                        self.markers.append(post.location)
+                    }
                 }
                 
-                    
             }
         }
     }
     override func viewWillAppear(_ animated: Bool) {
         // Update the data from Firebase
         updateData()
+        
+    }
+
+    // MARK: GMSMapViewDelegate
+    
+    
+    func mapView(_ mapView: GMSMapView, didLongPressInfoWindowOf
+        //add functionality so long press accepts the post
+        
+        marker: GMSMarker) {
+        print("info window pressed!")
+        
+        let alertController = UIAlertController(title: "Happy Questing!", message: "Post has been added to your questlog.", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+        present(alertController, animated: true, completion: nil)
+        marker.icon = self.imageWithImage(image: self.excl2!, scaledToSize: CGSize(width: 25, height: 25))
+        marker.opacity = 0.8
+        //create table view cell for questlog
+        let index = markers.index(of: marker)
+        let selectedPost = activePosts[index!]
+        
     }
     
+ 
+    //custom infowindow—needs renovation
+    /*
+    internal func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        //replaces default info window with postwindowview
+        //long press means accept
+        var window = Bundle.main.loadNibNamed("PostWindowView", owner: self, options: nil)
+        let infoWindow = window![0] as! PostWindow
+        let index = markers.index(of: marker)
+        let selectedPost = activePosts[index!]
+            infoWindow.poster.text = selectedPost.poster
+            infoWindow.loc.text = selectedPost.place
+            infoWindow.desc.text = selectedPost.description
+            infoWindow.count.text = "\(0)"
+            infoWindow.total.text = "\(selectedPost.count)"
+        
+        return infoWindow
+    }
+    */
+
     override func viewDidLoad() {
         super.viewDidLoad()
         manager.delegate = self //important!!
@@ -69,11 +114,14 @@ class MapViewController: UIViewController {
         manager.delegate = self
         placesClient = GMSPlacesClient.shared()
         //set arbitrary default location coords
-        let camera = GMSCameraPosition.camera(withLatitude: 37.871853, longitude: -122.258423, zoom: zoomLevel)
+        //cdmhs: 33.635536, -117.877422
+        let camera = GMSCameraPosition.camera(withLatitude: 33.635536, longitude: -117.877422, zoom: zoomLevel)
         mapView = GMSMapView.map(withFrame: view.bounds, camera: camera)
         mapView.settings.myLocationButton = true
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.isMyLocationEnabled = true
+        mapView.delegate = self
+        
         do {
             // Set the map style by passing the URL of the local file.
             if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
@@ -99,6 +147,16 @@ class MapViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //credit to MrMins from StackOverflow
+    func imageWithImage(image:UIImage, scaledToSize newSize:CGSize) -> UIImage{
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
+        //image.draw(in: CGRectMake(0, 0, newSize.width, newSize.height))
+        image.draw(in: CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: newSize.width, height: newSize.height))  )
+        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return newImage
     }
 
     /*
