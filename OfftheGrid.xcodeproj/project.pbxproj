@@ -21,6 +21,7 @@
 		B00440722099A7E0006416FB /* NewPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00440712099A7E0006416FB /* NewPostController.swift */; };
 		B00440742099C84D006416FB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00440732099C84D006416FB /* SearchViewController.swift */; };
 		B0044078209A2F9C006416FB /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = B0044077209A2F9C006416FB /* style.json */; };
+		B00A0A072143945700F720BF /* particles.json in Resources */ = {isa = PBXBuildFile; fileRef = B00A0A06214393BE00F720BF /* particles.json */; };
 		B04D47EE20C5FB5100B7595E /* PostWindowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B04D47ED20C5FB5100B7595E /* PostWindowView.xib */; };
 		B04D47F020C61F0700B7595E /* PostWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D47EF20C61F0700B7595E /* PostWindow.swift */; };
 		B0842702208D88060089A65C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0842701208D88060089A65C /* LoginViewController.swift */; };
@@ -29,6 +30,9 @@
 		B086299120995A5D0047D6E2 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B086299020995A5D0047D6E2 /* CurrentUser.swift */; };
 		B08629932099A54A0047D6E2 /* PostFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08629922099A54A0047D6E2 /* PostFeed.swift */; };
 		B098710420C8727500424285 /* AcceptedPostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B098710320C8727500424285 /* AcceptedPostsController.swift */; };
+		B098710A20CCAA5400424285 /* AcceptedPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B098710920CCAA5400424285 /* AcceptedPostCell.swift */; };
+		B0AC64C921433EF4009A37EB /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AC64C821433EF4009A37EB /* UIButtonExtension.swift */; };
+		B0C61B902115F1A70065EC78 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = B0C61B8F2115F1A60065EC78 /* icons */; };
 		B0CC112AC959DF780030346D /* Pods_OfftheGridUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45632C8F7117505E31309E89 /* Pods_OfftheGridUITests.framework */; };
 		B846DDD98C0DEA2E003549A9 /* Pods_OfftheGridTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E057B173C93B538D8906497 /* Pods_OfftheGridTests.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +83,7 @@
 		B00440712099A7E0006416FB /* NewPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostController.swift; sourceTree = "<group>"; };
 		B00440732099C84D006416FB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B0044077209A2F9C006416FB /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
+		B00A0A06214393BE00F720BF /* particles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = particles.json; sourceTree = "<group>"; };
 		B04D47ED20C5FB5100B7595E /* PostWindowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostWindowView.xib; sourceTree = "<group>"; };
 		B04D47EF20C61F0700B7595E /* PostWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWindow.swift; sourceTree = "<group>"; };
 		B0842701208D88060089A65C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +92,9 @@
 		B086299020995A5D0047D6E2 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		B08629922099A54A0047D6E2 /* PostFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeed.swift; sourceTree = "<group>"; };
 		B098710320C8727500424285 /* AcceptedPostsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptedPostsController.swift; sourceTree = "<group>"; };
+		B098710920CCAA5400424285 /* AcceptedPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptedPostCell.swift; sourceTree = "<group>"; };
+		B0AC64C821433EF4009A37EB /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		B0C61B8F2115F1A60065EC78 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icons; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,13 +173,16 @@
 		B0018191208734EA0068C996 /* OfftheGrid */ = {
 			isa = PBXGroup;
 			children = (
+				B0C61B8F2115F1A60065EC78 /* icons */,
 				B00181C3208735320068C996 /* GoogleService-Info.plist */,
 				B0018192208734EA0068C996 /* AppDelegate.swift */,
 				B086299020995A5D0047D6E2 /* CurrentUser.swift */,
 				B086298A2099123B0047D6E2 /* Post.swift */,
 				B0018194208734EA0068C996 /* ViewController.swift */,
 				B0842701208D88060089A65C /* LoginViewController.swift */,
+				B00A0A06214393BE00F720BF /* particles.json */,
 				B00440712099A7E0006416FB /* NewPostController.swift */,
+				B0AC64C821433EF4009A37EB /* UIButtonExtension.swift */,
 				B08629922099A54A0047D6E2 /* PostFeed.swift */,
 				B086298E209925570047D6E2 /* MapViewController.swift */,
 				B00440732099C84D006416FB /* SearchViewController.swift */,
@@ -185,6 +196,7 @@
 				B0018199208734EA0068C996 /* OfftheGrid.xcdatamodeld */,
 				B0044077209A2F9C006416FB /* style.json */,
 				B04D47ED20C5FB5100B7595E /* PostWindowView.xib */,
+				B098710920CCAA5400424285 /* AcceptedPostCell.swift */,
 			);
 			path = OfftheGrid;
 			sourceTree = "<group>";
@@ -321,6 +333,8 @@
 				B00181C4208735330068C996 /* GoogleService-Info.plist in Resources */,
 				B001819D208734EC0068C996 /* Assets.xcassets in Resources */,
 				B0044078209A2F9C006416FB /* style.json in Resources */,
+				B00A0A072143945700F720BF /* particles.json in Resources */,
+				B0C61B902115F1A70065EC78 /* icons in Resources */,
 				B0018198208734EA0068C996 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +386,7 @@
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -381,6 +396,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,8 +478,10 @@
 				B00181C820873A510068C996 /* SignupViewController.swift in Sources */,
 				B001819B208734EA0068C996 /* OfftheGrid.xcdatamodeld in Sources */,
 				B086299120995A5D0047D6E2 /* CurrentUser.swift in Sources */,
+				B0AC64C921433EF4009A37EB /* UIButtonExtension.swift in Sources */,
 				B086298F209925570047D6E2 /* MapViewController.swift in Sources */,
 				B00440722099A7E0006416FB /* NewPostController.swift in Sources */,
+				B098710A20CCAA5400424285 /* AcceptedPostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

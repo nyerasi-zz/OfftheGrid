@@ -7,10 +7,46 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
+import GoogleMaps
 
-class AcceptedPostsController: UITableViewController {
+class AcceptedPostsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet var postsTV: UITableView!
+    var acceptedPosts = [Post]()
+    var acceptedIDs = [String]()
+    var user = CurrentUser()
+    var postDicts = [[String:NSObject]]()
+    
+    func addAcceptedPost(post: Post) {
+       acceptedPosts.append(post)
+       print("new post accepted!")
+    }
+    
+    /*
+    //review how to do this
+    func getPosts() {
+        let dbRef = Database.database().reference()
+        dbRef.child("Users").child(user.id).child("Accepted Posts").observeSingleEvent(of: .value, with: { snapshot -> Void in
+            if snapshot.exists() {
+                if let posts = snapshot.value as? [String:AnyObject] {
+                    self.user.getAcceptedPostIDs(completion: { (ids) in
+                        for postKey in posts.keys {
+                            let postDict = posts[postKey]! as! [String: NSObject]
+                            self.postDicts.append(postDict)
+                            let readPost = ids.contains(postKey)
+                            
+                        }
+                    })
+                }
+        }
+    })
+        
+    }
+ */
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -27,25 +63,25 @@ class AcceptedPostsController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-
+        // See custom cell for fields to update
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -87,6 +123,9 @@ class AcceptedPostsController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nav = segue.destination as? UINavigationController, let mvc = nav.topViewController as? MapViewController {
+            mvc.delegate = self
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }

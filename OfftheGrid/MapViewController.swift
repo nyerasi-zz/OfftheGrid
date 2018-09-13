@@ -9,6 +9,8 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import FirebaseDatabase
+import FirebaseAuth
 
 class MapViewController: UIViewController, GMSMapViewDelegate {
     //credit to Freepik from flaticon.com
@@ -56,6 +58,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
                 
             }
         }
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         // Update the data from Firebase
@@ -81,9 +84,26 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         //create table view cell for questlog
         let index = markers.index(of: marker)
         let selectedPost = activePosts[index!]
-        
+        acceptPost(post: selectedPost)
     }
     
+    func acceptPost(post: Post) {
+        let currentUser = Auth.auth().currentUser
+        let username = currentUser?.displayName
+        let id = currentUser?.uid
+        
+        let dbRef = Database.database().reference()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.A"
+        let dateString = dateFormatter.string(from: post.date)
+        let loc = post.location.position
+        let postDict: [String:AnyObject] = ["poster": post.poster as AnyObject, "date": dateString as AnyObject, "num": post.count as AnyObject, "lat":loc.latitude as AnyObject, "lon":loc.longitude as AnyObject, "place":post.place as AnyObject, "desc":post.description as AnyObject]
+        
+        
+        dbRef.child("Users").child(id!).child("Accepted Posts").childByAutoId().setValue(postDict)
+        print("check firebase to verify")
+    }
  
     //custom infowindow—needs renovation
     /*
@@ -210,6 +230,7 @@ extension MapViewController: CLLocationManagerDelegate {
         print("Error: \(error)")
     }
 }
+
 /*
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

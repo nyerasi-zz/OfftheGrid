@@ -14,6 +14,7 @@ target 'OfftheGrid' do
     pod 'FirebaseDatabase'
     pod 'GoogleMaps'
     pod 'GooglePlaces'
+    pod 'lottie-ios'
     
   target 'OfftheGridTests' do
     inherit! :search_paths

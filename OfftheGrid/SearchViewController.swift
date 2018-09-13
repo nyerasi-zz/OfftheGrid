@@ -14,7 +14,7 @@ class SearchViewController: UIViewController, UINavigationControllerDelegate {
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController?
     var resultView: UITextView?
-    var pData = PlaceData()
+    var placeData: GMSPlace?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +45,7 @@ extension SearchViewController: GMSAutocompleteResultsViewControllerDelegate {
         searchController?.isActive = false
         // Do something with the selected place.
         //segue back to new post controller with place saved?
-        pData.name = place.name
-        pData.coord = place.coordinate
+        placeData = place
         //pop back to new post controller
         let alertController = UIAlertController(title: "Location Selected!", message: "Finish editing your post.", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -77,6 +76,6 @@ extension SearchViewController: GMSAutocompleteResultsViewControllerDelegate {
 
 extension SearchViewController {
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        (viewController as? NewPostController)?.pData = pData // Here you pass the data to your original view controller
+        (viewController as? NewPostController)?.placeData = placeData // Here you pass the data to your original view controller
     }
 }

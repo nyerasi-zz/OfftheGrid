@@ -11,7 +11,6 @@ import Firebase
 import GoogleMaps
 import GooglePlaces
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var currentLocation: CLLocationCoordinate2D?

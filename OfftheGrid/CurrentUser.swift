@@ -24,20 +24,20 @@ class CurrentUser {
         id = currentUser?.uid
     }
     
-//    func getReadPostIDs(completion: @escaping ([String]) -> Void) {
-//        var postArray: [String] = []
-//        self.dbRef.child(firUsersNode).child(id).child(firReadPostsNode).observeSingleEvent(of: .value) { (snapshot) in
-//            let post = snapshot.value as? [String: AnyObject]
-//            if let actualPost = post {
-//                for (key, post) in actualPost {
-//                    postArray.append(key)
-//                }
-//            }
-//            completion(postArray)
-//        }
-//    }
-//
-//   func addNewReadPost(postID: String) {
-//        self.dbRef.child(firUsersNode).child(id).child(firReadPostsNode).childByAutoId().setValue(postID)
-//}
+    func getAcceptedPostIDs(completion: @escaping ([String]) -> Void) {
+        var postArray: [String] = []
+        self.dbRef.child("Users").child(id).child("Accepted Posts").observeSingleEvent(of: .value) { (snapshot) in
+            let post = snapshot.value as? [String: AnyObject]
+            if let actualPost = post {
+                for (key, post) in actualPost {
+                    postArray.append(key)
+                }
+            }
+            completion(postArray)
+        }
+    }
+
+   func addNewReadPost(postID: String) {
+        self.dbRef.child("Users").child(id).child("Accepted Posts").childByAutoId().setValue(postID)
+}
 }

@@ -18,9 +18,10 @@ class PostWindow: UIView {
     @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var loc: UILabel!
     
-    @IBAction func close(_ sender: UIButton) {
-    print("return to map!")
-    }
+    @IBOutlet weak var profPic: UIImageView!
+    @IBOutlet weak var timeLeft: UILabel!
+    
+    
     @IBAction func accept(_ sender: Any) {
         print("add this post to quest log!")
     }
