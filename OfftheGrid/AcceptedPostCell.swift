@@ -10,12 +10,11 @@ import UIKit
 
 class AcceptedPostCell: UITableViewCell {
 
-    @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var cellPoster: UILabel!
     @IBOutlet weak var cellLoc: UILabel!
     @IBOutlet weak var cellTime: UILabel!
-    @IBOutlet weak var cellCount: UILabel!
+   // @IBOutlet weak var cellCount: UILabel!
     
     
     override func awakeFromNib() {

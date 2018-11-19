@@ -4,15 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>OfftheGrid.xcscheme</key>
+		<key>demo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
-		</dict>
-		<key>OfftheGrid.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 </dict>

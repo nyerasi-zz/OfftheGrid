@@ -69,7 +69,8 @@ class NewPostController: UIViewController, UITextViewDelegate, UIScrollViewDeleg
     @IBAction func postPressed(_ sender: UIButton) {
         //animation
         let anv = LOTAnimationView(name: "particles")
-        anv.frame = CGRect(x: postbutton.frame.midX, y: postbutton.frame.midY, width: 100, height: 100)
+        anv.layer.zPosition = -1
+        anv.frame = postbutton.frame
         view.addSubview(anv)
         anv.play()
         //animate post button to
@@ -81,7 +82,7 @@ class NewPostController: UIViewController, UITextViewDelegate, UIScrollViewDeleg
         guard let desc = postDescription.text else { return }
         date = datePicker.date
         guard let num = Int(numPeople.text!) else { return }
-        //arbitrary location in botanical garden for testing
+        //arbitrary location in uc berkeley botanical garden for testing
         loc = CLLocationCoordinate2D(latitude: 37.873495, longitude: -122.236281)
         locName = "Choose your destination."
         guard let poster = currentUser!.displayName else { return }
@@ -144,7 +145,7 @@ class NewPostController: UIViewController, UITextViewDelegate, UIScrollViewDeleg
         searchButton.layer.borderWidth = 2
         //searchButton.layer.backgroundColor =
         searchButton.layer.cornerRadius = searchButton.layer.frame.height / 2
-        searchButton.layer.m4asksToBounds = true
+        searchButton.layer.masksToBounds = true
         searchButton.setTitleColor(.black, for: .normal)
         
         picButton.layer.borderWidth = 2
